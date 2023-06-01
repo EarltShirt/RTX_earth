@@ -41,13 +41,15 @@
         "xstddef": "cpp",
         "xstring": "cpp",
         "xtr1common": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "filesystem": "cpp"
     },
     "C_Cpp.default.includePath": [
         "${workspaceFolder}/include",
         "D:/repos/vcpkg/installed/x64-windows/include",
-        "D:/repos/vcpkg/installed/x64-windows/include/curl"
-    ],
+        "D:/repos/vcpkg/installed/x64-windows/include/curl",
+        "D:/repos/vcpkg/installed/x64-windows/include/zip"
+   ],   
     "cmake.cmakePath": "C:\\Program Files\\CMake\\bin\\cmake.exe",
     "cmake.configureOnOpen": true,
     "cmake.configureSettings": {

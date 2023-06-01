@@ -7,13 +7,16 @@ C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake
 C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeGenericSystem.cmake
 C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake
 C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/CMakePushCheckState.cmake
 C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeRCInformation.cmake
 C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake
 C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/CheckSymbolExists.cmake
 C:/Program Files/CMake/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake
 C:/Program Files/CMake/share/cmake-3.26/Modules/Compiler/MSVC-C.cmake
 C:/Program Files/CMake/share/cmake-3.26/Modules/Compiler/MSVC-CXX.cmake
 C:/Program Files/CMake/share/cmake-3.26/Modules/Compiler/MSVC.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/FindBZip2.cmake
 C:/Program Files/CMake/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake
 C:/Program Files/CMake/share/cmake-3.26/Modules/FindPackageMessage.cmake
 C:/Program Files/CMake/share/cmake-3.26/Modules/FindZLIB.cmake
@@ -34,5 +37,10 @@ D:/repos/vcpkg/installed/x64-windows/share/curl/CURLTargets-debug.cmake
 D:/repos/vcpkg/installed/x64-windows/share/curl/CURLTargets-release.cmake
 D:/repos/vcpkg/installed/x64-windows/share/curl/CURLTargets.cmake
 D:/repos/vcpkg/installed/x64-windows/share/curl/vcpkg-cmake-wrapper.cmake
+D:/repos/vcpkg/installed/x64-windows/share/libzip/libzip-config-version.cmake
+D:/repos/vcpkg/installed/x64-windows/share/libzip/libzip-config.cmake
+D:/repos/vcpkg/installed/x64-windows/share/libzip/libzip-targets-debug.cmake
+D:/repos/vcpkg/installed/x64-windows/share/libzip/libzip-targets-release.cmake
+D:/repos/vcpkg/installed/x64-windows/share/libzip/libzip-targets.cmake
 D:/repos/vcpkg/installed/x64-windows/share/zlib/vcpkg-cmake-wrapper.cmake
 D:/repos/vcpkg/scripts/buildsystems/vcpkg.cmake

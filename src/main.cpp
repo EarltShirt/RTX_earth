@@ -3,6 +3,7 @@
 #include "callback.h"
 #include <iostream>
 #include <string>
+#include "unzip.h"
 
 int main() {
     CURL* curl;
@@ -25,8 +26,9 @@ int main() {
         countFile.close();
 
         int currentUrl = 0;
+        int maxUrls = 1000;
 
-        while (std::getline(inputFile, url)) {
+        while (std::getline(inputFile, url) && currentUrl < maxUrls) {
             currentUrl++;
 
             std::string filename = "../data/loaded/" + url.substr(url.find_last_of('/') + 1);
@@ -54,5 +56,13 @@ int main() {
     }
 
     curl_global_cleanup();
+
+    std::string zipDirectory = "../data/loaded";
+    std::string extractDirectory = "../data/unzipped";
+
+    std::cout << "Unzipping files..." << std::endl;
+    unzipAll();
+    std::cout << "All files were unzipped" << std::endl;
+
     return 0;
 }

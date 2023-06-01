@@ -269,3 +269,79 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CheckSymbolExists.cmake:145 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CheckSymbolExists.cmake:71 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/FindBZip2.cmake:93 (CHECK_SYMBOL_EXISTS)"
+      - "D:/repos/vcpkg/scripts/buildsystems/vcpkg.cmake:853 (_find_package)"
+      - "C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "D:/repos/vcpkg/installed/x64-windows/share/libzip/libzip-config.cmake:30 (find_dependency)"
+      - "D:/repos/vcpkg/scripts/buildsystems/vcpkg.cmake:853 (_find_package)"
+      - "CMakeLists.txt:10 (find_package)"
+    checks:
+      - "Looking for BZ2_bzCompressInit"
+    directories:
+      source: "D:/repos/RTX_earth/build/CMakeFiles/CMakeScratch/TryCompile-fn2b99"
+      binary: "D:/repos/RTX_earth/build/CMakeFiles/CMakeScratch/TryCompile-fn2b99"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "D:/repos/vcpkg"
+    buildResult:
+      variable: "BZIP2_NEED_PREFIX"
+      cached: true
+      stdout: |
+        Change Dir: D:/repos/RTX_earth/build/CMakeFiles/CMakeScratch/TryCompile-fn2b99
+        
+        Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_87c86.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n && Microsoft (R) Build Engine version 16.11.2+f32259642 pour .NET Framework
+        Copyright (C) Microsoft Corporation. Tous droits réservés.
+        
+        La génération a démarré 01/06/2023 15:54:08.
+        Projet "D:\\repos\\RTX_earth\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fn2b99\\cmTC_87c86.vcxproj" sur le noud 1 (cibles par défaut).
+        PrepareForBuild:
+          Création du répertoire "cmTC_87c86.dir\\Debug\\".
+          Création du répertoire "D:\\repos\\RTX_earth\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fn2b99\\Debug\\".
+          Création du répertoire "cmTC_87c86.dir\\Debug\\cmTC_87c86.tlog\\".
+        InitializeBuildStatus:
+          Création de "cmTC_87c86.dir\\Debug\\cmTC_87c86.tlog\\unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /I"D:\\repos\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_87c86.dir\\Debug\\\\" /Fd"cmTC_87c86.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\repos\\RTX_earth\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fn2b99\\CheckSymbolExists.c"
+          Compilateur d'optimisation Microsoft (R) C/C++ version 19.29.30148 pour x64
+          Copyright (C) Microsoft Corporation. Tous droits réservés.
+          CheckSymbolExists.c
+          cl /c /I"D:\\repos\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_87c86.dir\\Debug\\\\" /Fd"cmTC_87c86.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\repos\\RTX_earth\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fn2b99\\CheckSymbolExists.c"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\repos\\RTX_earth\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fn2b99\\Debug\\cmTC_87c86.exe" /INCREMENTAL /ILK:"cmTC_87c86.dir\\Debug\\cmTC_87c86.ilk" /NOLOGO "D:\\repos\\vcpkg\\installed\\x64-windows\\debug\\lib\\bz2d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/repos/RTX_earth/build/CMakeFiles/CMakeScratch/TryCompile-fn2b99/Debug/cmTC_87c86.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/repos/RTX_earth/build/CMakeFiles/CMakeScratch/TryCompile-fn2b99/Debug/cmTC_87c86.lib" /MACHINE:X64  /machine:x64 cmTC_87c86.dir\\Debug\\CheckSymbolExists.obj
+          cmTC_87c86.vcxproj -> D:\\repos\\RTX_earth\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fn2b99\\Debug\\cmTC_87c86.exe
+        PostBuildEvent:
+          setlocal
+          C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noprofile -executionpolicy Bypass -file D:/repos/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary D:/repos/RTX_earth/build/CMakeFiles/CMakeScratch/TryCompile-fn2b99/Debug/cmTC_87c86.exe -installedDir D:/repos/vcpkg/installed/x64-windows/debug/bin -OutVariable out
+          if %errorlevel% neq 0 goto :cmEnd
+          :cmEnd
+          endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+          :cmErrorLevel
+          exit /b %1
+          :cmDone
+          if %errorlevel% neq 0 goto :VCEnd
+          :VCEnd
+        FinalizeBuildStatus:
+          Suppression du fichier "cmTC_87c86.dir\\Debug\\cmTC_87c86.tlog\\unsuccessfulbuild".
+          Mise à jour de l'horodatage "cmTC_87c86.dir\\Debug\\cmTC_87c86.tlog\\cmTC_87c86.lastbuildstate".
+        Génération du projet "D:\\repos\\RTX_earth\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fn2b99\\cmTC_87c86.vcxproj" terminée (cibles par défaut).
+        
+        La génération a réussi.
+            0 Avertissement(s)
+            0 Erreur(s)
+        
+        Temps écoulé 00:00:01.99
+        
+      exitCode: 0
+...

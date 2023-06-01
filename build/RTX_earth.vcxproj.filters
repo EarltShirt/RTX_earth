@@ -7,6 +7,9 @@
     <ClCompile Include="D:\repos\RTX_earth\src\load.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\repos\RTX_earth\src\unzip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="D:\repos\RTX_earth\CMakeLists.txt" />
