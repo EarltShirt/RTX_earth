@@ -48,6 +48,7 @@
         "D:/repos/vcpkg/installed/x64-windows/include",
         "D:/repos/vcpkg/installed/x64-windows/include/curl"
     ],
+    "cmake.cmakePath": "C:\\Program Files\\CMake\\bin\\cmake.exe",
     "cmake.configureOnOpen": true,
     "cmake.configureSettings": {
         "CMAKE_TOOLCHAIN_FILE": "D:/repos/vcpkg/scripts/buildsystems/vcpkg.cmake"

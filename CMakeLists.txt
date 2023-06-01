@@ -8,5 +8,6 @@ set(CURL_ROOT "D:/repos/vcpkg/installed/x64-windows")
 
 find_package(CURL CONFIG REQUIRED)
 include_directories(include)
+include_directories(D:/repos/vcpkg/installed/x64-windows/include/curl)
 add_executable(RTX_earth src/main.cpp src/load.cpp)
 target_link_libraries(RTX_earth PRIVATE CURL::libcurl)
