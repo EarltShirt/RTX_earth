@@ -1,6 +1,8 @@
 #include <fstream>
 #include <curl.h>
 #include "callback.h"
+#include <iostream>
+#include <string>
 
 int main() {
     CURL* curl;
@@ -10,18 +12,44 @@ int main() {
     curl = curl_easy_init();
 
     if (curl) {
-        std::ofstream file;
-        file.open("output.hgt.zip", std::ios::binary);
+        std::ifstream inputFile("../data/NASA_DEM.txt");
+        std::string url;
 
-        curl_easy_setopt(curl, CURLOPT_URL, "https://e4ftl01.cr.usgs.gov//DP133/SRTM/SRTMGL3.003/2000.02.11/N00E109.SRTMGL3.hgt.zip");
-        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
-        curl_easy_setopt(curl, CURLOPT_WRITEDATA, &file);
+        // Get the total number of URLs
+        int totalUrls = 0;
+        std::ifstream countFile("../data/NASA_DEM.txt");
+        std::string line;
+        while (std::getline(countFile, line)) {
+            totalUrls++;
+        }
+        countFile.close();
 
-        res = curl_easy_perform(curl);
+        int currentUrl = 0;
 
-        if (res != CURLE_OK)
-            fprintf(stderr, "curl_easy_perform() failed: %s\n", curl_easy_strerror(res));
+        while (std::getline(inputFile, url)) {
+            currentUrl++;
 
+            std::string filename = "../data/loaded/" + url.substr(url.find_last_of('/') + 1);
+            std::ofstream file(filename, std::ios::binary);
+
+            curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
+            curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
+            curl_easy_setopt(curl, CURLOPT_WRITEDATA, &file);
+
+            res = curl_easy_perform(curl);
+
+            if (res != CURLE_OK) {
+                fprintf(stderr, "curl_easy_perform() failed: %s\n", curl_easy_strerror(res));
+                std::cout << "Failed to download URL: " << url << std::endl;
+            } else {
+                double progress = static_cast<double>(currentUrl) / totalUrls * 100;
+                std::cout << "Progress: " << progress << "%" << std::endl;
+            }
+
+            file.close();
+        }
+
+        inputFile.close();
         curl_easy_cleanup(curl);
     }
 

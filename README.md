@@ -5,4 +5,5 @@ To run the code :
 cd build
 cmake ..
 cmake --build .
+.\Debug\RTX_earth.exe
 '''
