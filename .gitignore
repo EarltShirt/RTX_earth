@@ -1,1 +1,2 @@
-/data/loaded/
+/data/*
+/build/*
