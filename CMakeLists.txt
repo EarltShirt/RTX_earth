@@ -13,5 +13,5 @@ include_directories(include)
 include_directories(D:/repos/vcpkg/installed/x64-windows/include/curl)
 include_directories(D:/repos/vcpkg/installed/x64-windows/include/zip)
 
-add_executable(RTX_earth src/main.cpp src/load.cpp src/unzip.cpp)
+add_executable(RTX_earth src/main.cpp src/load.cpp src/unzip.cpp src/HeightMap.cpp)
 target_link_libraries(RTX_earth PRIVATE CURL::libcurl libzip::zip)
