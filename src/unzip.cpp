@@ -82,8 +82,8 @@ void unzipDirectory(const std::string& zipDirectory, const std::string& extractD
 }
 
 int unzipAll() {
-    std::string zipDirectory = "data/loaded";
-    std::string extractDirectory = "data/unzipped";
+    std::string zipDirectory = "../data/loaded";
+    std::string extractDirectory = "../data/unzipped";
 
     unzipDirectory(zipDirectory, extractDirectory);
 
